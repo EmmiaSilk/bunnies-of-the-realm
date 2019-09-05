@@ -1,0 +1,34 @@
+farming:
+  - # Harvesting
+    name: Harvesting
+    energyCost: 1 point per 3&nbsp;harvests
+    payout: 7 copper
+    perEnergy: 21 copper
+    notes: >-
+      Currently the least energy-efficient job.
+  - # Replanting
+    name: Replanting
+    energyCost: Free
+    payout: --
+    perEnergy: --
+    notes: >-
+      Failure to replant gives negative karma
+
+beekeeping:
+  - # Single harvest
+    name: Single Harvest
+    energyCost: 3 points per honey
+    payout: 2 silver
+    perEnergy: 2/3 silver
+    notes: >-
+      Consumes 1 bottle per honey. Gives honey bottles which must
+      be exchanged for silver at the human wares merchant.
+      May result in getting killed by bees.
+  - # Harvesting with Honeycombs
+    name: Harvest with Honeycombs
+    energyCost: 30 points average
+    payout: 20 silver average
+    perEnergy: 2/3 silver
+    notes: >-
+      In my experience, the honeycomb allows you to harvest 10 honey before
+      getting attention from bees. Your mileage may vary.

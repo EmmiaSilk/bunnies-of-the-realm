@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting"
+  aria-labeledby="post-title">
+  <header class="post-header">
+    <h1 class="post-title" id="post-title" itemprop="name header">
+      {{ page.title | escape }}
+    </h1>
+    <p class="post-meta">
+      <time class="date-published"
+      datetime="{{ page.date | date_to_xmlschema}}"
+      itemprop="datePublished">
+      {%- assign date_format = "%b %-d, %Y"  -%}
+      {{ page.date | date: date_format }}
+    </time>
+    {%- if page.author -%}
+    &bull;
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        {{page.author}}
+      </span>
+    </span>
+    {%- endif -%}
+  </p>
+</header>
+
+<div class="post-content">
+  {% if page.image %}
+    <figure class="fig" style="max-width: 30em; margin: auto;">
+      <img src="{{ page.image | relative_url }}" style="max-width: 100%;">
+      <figcaption> {{ page.imageCaption }} </figcaption>
+    </figure>
+  {% endif %}
+
+  {{ content }}
+</div>
+
+<a href="{{page.url | relative_url}}" hidden></a>
+</article>

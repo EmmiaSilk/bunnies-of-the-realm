@@ -1,0 +1,5 @@
+# Navbar items are rendered in the order they
+# appear in this data file.
+- index.md
+- guides/index.html
+# - map.html

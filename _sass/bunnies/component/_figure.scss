@@ -1,0 +1,15 @@
+.fig {
+  border: 1px solid lightgray;
+  padding: 0.5em;
+  img {
+    width: 100%;
+  }
+  &--left {
+    float: left;
+    clear: left;
+  }
+  &--right {
+    float: right;
+    clear: right;
+  }
+}

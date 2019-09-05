@@ -1,0 +1,17 @@
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    {% include component/pagenav.html %}
+  </div>
+
+  {% capture imgSrcSet %}
+    {% for source in page.srcset %}
+      {{source.path | relative_url}} {{source.width}}
+      {%- if forloop.last == false -%},{%- endif -%}
+    {% endfor %}
+  {% endcapture %}
+
+  <div class="site-title-container">
+    <img class="heading-banner" srcset="{{imgSrcSet}}">
+    <div class="site-title"> Bunnies of the Realm </div>
+  </div>
+</header>

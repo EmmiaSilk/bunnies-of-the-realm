@@ -1,0 +1,38 @@
+{%- comment -%}
+  Variables:
+    - post
+    - title - optional
+{%- endcomment -%}
+
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name header">
+      <a href="{{include.post.url | relative_url}}">
+        {%- if include.title -%}
+          {{ include.title | escape }}
+        {%- else  -%}
+          {{ include.post.title | escape }}
+        {%- endif -%}
+      </a>
+    </h1>
+    <p class="post-meta">
+      <time class="date-published"
+          datetime="{{" date_to_xmlschema="}}"
+          itemprop="datePublished">
+        {%- assign date_format = "%b %-d, %Y" -%}
+        {{ include.post.date | date: date_format }}
+      </time>
+      {% if include.post.author %}
+      &bull;
+      <span itemprop="author" itemscope
+        itemtype="http://schema.org/Person">
+        <span itemprop="name">{{include.post.author}}</span>
+      </span>
+      {% endif %}
+    </p>
+  </header>
+  {{ include.post.excerpt }}
+
+  <a href="{{include.post.url | relative_url}}"> Read more </a>
+</article>

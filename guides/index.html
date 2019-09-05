@@ -1,0 +1,22 @@
+---
+title: Guides
+permalink: /guides/
+layout: post
+---
+<h2>
+  Jobs
+</h2>
+<ul>
+  <li>
+    <a href="{{ "/guides/jobs" | relative_url }}">
+      A Rabbit's Guide to Jobs
+    </a>
+  </li>
+  {% for job in site.categories.job %}
+  <li>
+    <a href="{{job.url | relative_url}}">
+      {{ job.name }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

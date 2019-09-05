@@ -1,0 +1,23 @@
+<table class="table-stats">
+  <thead>
+    <tr>
+      <th> Activity </th>
+      <th> Energy Cost </th>
+      <th> Payout </th>
+      <th> Pay per Energy </th>
+      <th> Notes </th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- assign theJob = site.data.jobinfo[include.job] -%}
+    {% for activity in theJob %}
+    <tr>
+      <td>{{activity.name}}</td>
+      <td>{{activity.energyCost}}</td>
+      <td>{{activity.payout}}</td>
+      <td>{{activity.perEnergy}}</td>
+      <td>{{activity.notes}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+}
+
+.table-stats {
+  width: 100%;
+  border-collapse: collapse;
+  /* Border */
+  &, th, td {
+    border: 1px solid black;
+  }
+
+  td, th {
+    padding: 0.25em 1em;
+    text-align: center;
+    margin: 0;
+  }
+}
