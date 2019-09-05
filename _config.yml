@@ -40,13 +40,13 @@ defaults:
       path: ""
     values:
       srcset:
-        - path: /assets/images/Banner/Tiny.jpg
+        - path: /assets/images/banner/Tiny.jpg
           width: 1280w
-        - path: /assets/images/Banner/Small.jpg
+        - path: /assets/images/banner/Small.jpg
           width: 1920w
-        - path: /assets/images/Banner/Medium.jpg
+        - path: /assets/images/banner/Medium.jpg
           width: 2560w
-        - path: /assets/images/Banner/Large.jpg
+        - path: /assets/images/banner/Large.jpg
           width: 3840w
 
 # Exclude from processing.
